@@ -13,7 +13,7 @@ git clone https://github.com/cooperyen/WITS.git
 ### Move to project
 
 ```bash
-cd WITS
+cd WITS_test
 ```
 
 ### install
