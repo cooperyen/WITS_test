@@ -1,0 +1,18 @@
+.check__content {
+  display: flex;
+  column-gap: 14px;
+
+  .item {
+    display: flex;
+    column-gap: 4px;
+    align-items: center;
+    p {
+      color: #ababab;
+    }
+    &.item--active {
+      p {
+        color: #000000;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import './rwd.scss';
+
+$blue: #3c71ff;
+.regist__column {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 0;
+  .half {
+    width: 100%;
+    @include desktop {
+      max-width: 190px;
+    }
+  }
+  .item {
+    width: 100%;
+  }
+  .icon {
+    cursor: pointer;
+    margin-right: 14px;
+  }
+}
+.regist__remind {
+  margin-top: 8px;
+  font-size: 10px;
+}

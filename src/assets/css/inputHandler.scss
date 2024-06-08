@@ -1,0 +1,48 @@
+$bg: #f1f5ff;
+$color: #757575;
+
+.regist__item {
+  width: 100%;
+  display: flex;
+  background-color: $bg;
+  align-items: center;
+  border-radius: 4px;
+  .regist__text,
+  input {
+    width: 100%;
+  }
+  input {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 16px 12px;
+    background-color: $bg;
+  }
+  input[type='password']::-ms-reveal,
+  input[type='password']::-ms-clear {
+    display: none;
+  }
+}
+
+.regist__text {
+  max-height: 48px;
+
+  &.regist__text--active {
+    padding: 8px 12px 10px;
+    p {
+      font-size: 10px;
+      color: $color;
+      font-weight: 400;
+      line-height: 12px;
+    }
+    input {
+      margin-top: 2px;
+      padding: 0;
+      line-height: 16.8px;
+    }
+  }
+}
+
+input {
+  outline: unset;
+  border: unset;
+}

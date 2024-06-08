@@ -1,0 +1,221 @@
+@import './rwd.scss';
+$blue: #3c71ff;
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  @include desktop {
+    background: #f1f5ff;
+  }
+  @include mobile {
+    padding: 0 8px;
+  }
+  width: 100vw;
+  height: 100vh;
+}
+
+.login {
+  background-color: white;
+  width: 100%;
+  padding: 24px 0;
+  @include desktop {
+    box-shadow: 0px 5px 10px 5px #dee7ff40;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    max-width: 610px;
+    border-radius: 4px;
+  }
+  .login__content {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 401px;
+    width: 100%;
+  }
+  .login__nav {
+    margin: 0 8px;
+    @include desktop {
+      margin: 0 30.5px;
+    }
+
+    .box {
+      padding: 0 10px;
+      align-items: center;
+      height: 17px;
+      position: relative;
+      column-gap: 8px;
+      display: flex;
+      width: fit-content;
+      cursor: default;
+      &:hover {
+        &::after {
+          content: '';
+          display: block;
+          width: 51px;
+          height: 2px;
+          position: absolute;
+          background-color: $blue;
+          bottom: -4px;
+        }
+      }
+    }
+
+    a {
+      vertical-align: bottom;
+      font-size: 14px;
+      color: black;
+    }
+  }
+
+  .title__box {
+    margin-top: 32px;
+    @include mobile {
+      margin-top: 24px;
+    }
+    .title {
+      .title__main {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 36px;
+        margin-top: 8px;
+      }
+      .title__subtitle {
+        line-height: 21.6px;
+        font-size: 18px;
+      }
+    }
+    .btn {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+      // flex-wrap: wrap;
+      @include xs {
+        row-gap: 16px;
+        flex-wrap: wrap;
+      }
+      .google {
+        &:hover {
+          box-shadow: 0px 6px 15px 0px #3c71ff66;
+
+          .icon {
+            background-image: url('/image/googleWhite.svg');
+          }
+        }
+        .icon {
+          background-image: url('/image/google.svg');
+        }
+      }
+      .facebook {
+        &:hover {
+          .icon {
+            background-image: url('/image/facebookWhite.svg');
+          }
+        }
+        .icon {
+          background-image: url('/image/facebook.svg');
+        }
+      }
+      .icon__box {
+        .icon {
+          width: 16px;
+          height: 16px;
+        }
+        span {
+          min-width: 140px;
+        }
+      }
+    }
+    .space {
+      margin-top: 16px;
+      position: relative;
+      p {
+        line-height: 16.8px;
+        font-size: 14px;
+        font-weight: 400;
+        &::after {
+          content: '';
+          width: 175px;
+          height: 1px;
+          background-color: black;
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          @include mobile {
+            width: calc(100% - 213px);
+          }
+        }
+      }
+    }
+  }
+  .regist__box {
+    margin-top: 25px;
+  }
+  .privacy__box {
+    margin-top: 25px;
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    p {
+      font-size: 13px;
+      font-weight: 400;
+      color: #757575;
+    }
+  }
+  .create__box {
+    margin-top: 25px;
+    button {
+      outline: none;
+      border: none;
+      border-radius: 4px;
+      background-color: $blue;
+      width: 100%;
+      font-size: 14px;
+      padding: 16px 0;
+      color: white;
+    }
+  }
+
+  .login__box {
+    display: flex;
+    column-gap: 5px;
+    justify-content: center;
+    margin-top: 16px;
+    text-align: center;
+    cursor: default;
+    &:hover {
+      p {
+        color: #4c4c4c;
+      }
+      a {
+        &::after {
+          content: '';
+          display: block;
+          width: 41px;
+          height: 2px;
+          position: absolute;
+          background-color: $blue;
+          bottom: 0px;
+          left: -2px;
+        }
+      }
+    }
+
+    a,
+    p {
+      font-size: 13px;
+    }
+    p {
+      color: #757575;
+    }
+    a {
+      font-weight: 700;
+      position: relative;
+      color: $blue;
+    }
+  }
+}
